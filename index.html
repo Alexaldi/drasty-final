@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drasty Wedding Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <body>
+    <!-- Header -->
+
+    <!-- Main Section -->
+    <section id="hero" class="hero">
+      <div class="overlay"></div>
+      <header>
+        <div class="navbar">
+          <div class="logo">DRASTY GALLERY WEDDING</div>
+          <nav>
+            <ul>
+              <li class="nav-link"><a class="nav-item"  href="#home">HOME</a></li>
+              
+              <li class="dropdown">  
+                <button class="dropbtn">CONTACT</button>
+                <div class="dropdown-content">
+                  <a href="#instagram">Instagram</a>
+                  <a href="#whatsapp">WhatsApp</a>
+                </div>
+              </li>
+              
+              <li class="nav-link"><a class="nav-item" href="#about">ABOUT</a></li>
+              <li class="nav-link"><a class="nav-item" href="paket.html">PAKET</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="content">
+        <h1>WELCOME</h1>
+        <div class="title-container">
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="service-section">
+      <!-- Bagian pertama dengan teks di kiri, gambar di kanan -->
+      <div class="content-left">
+        <div class="text-content">
+          <h3>Riasan:</h3>
+          <p>
+            <img
+              src="assets/img/makeup-logo.png"
+              alt="Makeup Icon"
+              class="makeup-icon"
+            />
+           Riasan Akad dan Resepsi: Dari gaya natural hingga
+            glamour, sesuai dengan tema dan keinginanmu.
+          </p>
+          <p>
+           Makeup Pre-Wedding: Untuk foto pre-wedding yang
+            mengabadikan kecantikanmu dengan sempurna.
+          </p>
+          <p>
+           Paket Bridesmaid dan Keluarga: Pastikan semua orang
+            yang penting terlihat menawan di hari bahagia ini.
+          </p>
+        </div>
+        <div class="image-content">
+          <img
+            src="assets/img/palaroid1.jpg"
+            alt="Pernikahan"
+            class="polaroid"
+          />
+        </div>
+      </div>
+
+      <!-- Bagian kedua dengan teks di kanan, gambar di kiri -->
+      <div class="content-right">
+        <div class="image-content">
+          <img
+            src="assets/img/palaroid2.jpg"
+            alt="Pernikahan"
+            class="polaroid"
+          />
+        </div>
+        <div class="text-content">
+          <p>
+            <img
+              src="assets/img/logo-wedding.png"
+              alt="Logo Wedding"
+              class="wedding-icon"
+            />
+            <span class="fw-bold">Rayakan pernikahan impian</span>Anda dengan sentuhan budaya dari seluruh
+            Indonesia bersama Drasty Gallery Wedding, kami hadir untuk
+            menciptakan momen indah yang penuh makna dan keanggunan. Wujudkan
+            hari istimewa Anda bersama kami.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar")
+    const hero = document.querySelector(".hero")
+    const heroHeight = hero.offsetHeight
+
+    if (window.scrollY > heroHeight) {
+      navbar.classList.add("scrolled")
+    } else {
+      navbar.classList.remove("scrolled")
+    }
+  })
+</script>
