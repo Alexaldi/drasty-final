@@ -518,7 +518,7 @@ body {
 .package-text h2::before {
   content: '\1F46D'; /* Unicode character for couple icon */
   position: absolute;
-  left: 0;
+  left: 5;
   font-size: 24px;
   top: -5px;
 }
