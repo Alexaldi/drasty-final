@@ -257,8 +257,8 @@ body {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      min-width: 40vh;  /* Menambahkan lebar minimum */
-      min-height: 9vh; /* Menambahkan tinggi minimum */
+      min-width: 42vh;  /* Menambahkan lebar minimum */
+      min-height: 8vh; /* Menambahkan tinggi minimum */
       padding: 10px;
   }
 
