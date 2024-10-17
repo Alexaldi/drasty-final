@@ -518,7 +518,7 @@ body {
 .package-text h2::before {
   content: '\1F46D'; /* Unicode character for couple icon */
   position: absolute;
-  left: 5;
+  left: 0;
   font-size: 24px;
   top: -5px;
 }
@@ -647,7 +647,7 @@ body {
   }
 
   .package-text h2::before {
-    left: 48px;
+    left: 40px;
     top: -9px;
   }
 
@@ -675,7 +675,7 @@ body {
 }
 
 .mySlides img {
-  width: 60vw; /* Scale the image width for mobile */
+  width: 65vw; /* Scale the image width for mobile */
   height: 45vh;
   display: block; /* Ensure the image is treated as a block-level element */
   margin: 0 auto; /* Center the image */
