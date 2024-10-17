@@ -16,34 +16,20 @@ body {
   background-color: #fff;
 }
 
-/* Navbar */
-.navbar {
-  position: fixed; /* Navbar akan tetap berada di atas */
-  top: 0;
-  left: 0;
-  width: 100%; /* Memastikan lebar navbar mencakup seluruh layar */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  z-index: 1000; /* Memastikan navbar di atas konten lain */
-  color: #fff;
-  transition: background-color 0.6s ease, padding 0.4s ease;
-}
+/* Navbar Home*/
 
-.navbar2 {
-  position: fixed; /* Navbar akan tetap berada di atas */
+.navbar {
+  position: fixed; 
   top: 0;
   left: 0;
-  width: 100%; /* Memastikan lebar navbar mencakup seluruh layar */
+  width: 100%; 
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
-  z-index: 1000; /* Memastikan navbar di atas konten lain */
+  justify-content: space-between; /* Perbaikan di sini */
+  padding: 10px 15px;
+  z-index: 1000; 
   color: #fff;
   transition: background-color 0.6s ease, padding 0.4s ease;
-  background-color: rgba(0, 0, 0, 1);
 }
 
 .navbar.scrolled {
@@ -53,6 +39,7 @@ body {
 .navbar .logo {
   font-size: 24px;
   color: #e0ac1c; 
+  
 }
 
 .navbar ul {
@@ -76,43 +63,25 @@ body {
   border-radius: 5px;
 }
 
-.navbar2 .logo {
-  font-size: 24px;
-  color: #e0ac1c; 
-}
-.navbar2 ul {
-  list-style: none;
-  display: flex;
+.hamburger {
+    display: none;
 }
 
-
-.navbar2 ul li {
-  margin-left: 30px;
+.paket{
+  background-color: rgba(0, 0, 0, 1); 
 }
-
-.navbar2 ul li a {
-  text-decoration: none;
-  color: #9b8c0c;
-  font-weight: bold;
-  padding: 10px 15px;
-}
-
-.navbar2 ul li a:hover {
-  background-color: #555;
-  border-radius: 5px;
-}
-
 
 /* dropdown */
-/* Style the dropdown button */
+
 .dropbtn {
   background-color: transparent;
   color: #9b8c0c;
   border: none;
   cursor: pointer;
   font-family: "Abril Fatface",serif;
-  padding: 5px 15px;
-  border-radius: 5;
+  padding: 3px 15px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 /* Dropdown container */
@@ -149,7 +118,6 @@ body {
 .dropdown:hover .dropbtn {background-color: #555;}
 
 
-
 /* Hero Section */
 .hero {
   position: relative;
@@ -175,6 +143,7 @@ body {
   position: relative;
   z-index: 1;
   color: #fff;
+  padding: 20px;
 }
 
 .hero h1 {
@@ -187,7 +156,7 @@ body {
 
 .hero .title-container {
   margin-top: 10px;
-  padding: 5px 20px;
+  padding: 5px 15px;
   display: inline-block;
   background-image: url(assets/img/Group\ 2.png);
   background-size: contain;
@@ -206,14 +175,147 @@ body {
   padding: 0 15px;
 }
 
+.title {
+  position: absolute;
+}
+
+/* Responsive navbar Home */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 84px;
+    left: 0;
+  }
+
+  .paket ul{
+    top:59px ;
+  }
+
+  .navbar ul.active {
+    display: flex;
+    padding-bottom: 10px;
+  }
+
+  .navbar ul li {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .navbar .logo {
+    font-size: 24px;
+    color: #e0ac1c;
+    flex-grow: 10; 
+  
+  }
+
+  .hamburger{
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    position: relative; /* Ubah posisi dropdown untuk mobile */
+    background-color: rgba(0, 0, 0, 0.9); /* Warna background dropdown */
+    width: 100%; /* Buat dropdown memenuhi lebar layar */
+    text-align: center; /* Align text di tengah */
+    box-shadow: none; /* Hilangkan bayangan pada dropdown */
+    top: 15px;
+  }
+
+   .dropdown-content a {
+    padding: 10px; /* Sesuaikan padding untuk mobile */
+    color: #fff; /* Ubah warna teks untuk lebih terlihat di mobile */
+  }
+
+  /* Gaya tambahan untuk dropdown di bawah "CONTACT" pada tampilan mobile */
+  .dropdown:hover .dropdown-content {
+    display: block; /* Pastikan dropdown terbuka saat di klik */
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #555; /* Warna saat di hover */
+  }
+
+  .hero h1 {
+    font-size: 2.3rem; /* Lebar font lebih kecil di mobile */
+    margin: 10px 0; /* Spasi atas dan bawah */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Bayangan lebih kecil */
+  }
+
+   .hero .title-container {
+      background-size: cover;
+      padding: 10px 15px; /* Padding lebih kecil untuk mobile */
+      min-height: 20vh; /* Tinggi minimum yang lebih kecil untuk mobile */
+      width: 50%; /* Lebar 90% untuk mobile */
+      margin: 0 auto; /* Tengah-kan elemen */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-width: 40vh;  /* Menambahkan lebar minimum */
+      min-height: 9vh; /* Menambahkan tinggi minimum */
+      padding: 10px;
+  }
+
+  .hero .title-container h1 {
+    font-size: 1.8rem; /* Ukuran font lebih kecil untuk judul di mobile */
+    padding: 0; /* Hilangkan padding untuk judul */
+  }
+
+}
+
 
 /* Service Section */
 .service-section {
+  position: relative;
   padding: 50px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f4f4f4;
+  background: linear-gradient(132deg, #FFF 9%, #403D3D 100%);
+
+}
+
+.corner-image {
+  position: absolute;
+  width: 150px; /* Sesuaikan ukuran gambar */
+  height: auto;
+  z-index: 2;
+}
+
+.center-top-image {
+  position: absolute;
+  top: -130px; /* Sesuaikan agar posisinya tepat di atas */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px; /* Sesuaikan ukuran gambar */
+  height: auto;
+  z-index: 3; /* Pastikan gambar berada di atas konten lainnya */
+}
+
+.top-left {
+  top: 0px;
+  left: 0px;
+}
+
+.top-right {
+  top: 0px;
+  right: 0px;
+}
+
+.bottom-left {
+  bottom: 0px;
+  left: 0px;
+}
+
+.bottom-right {
+  bottom: 0px;
+  right: 0px;
 }
 
 .content-left, .content-right {
@@ -243,7 +345,8 @@ body {
 
 .image-content img {
   max-width: 100%;
-  width: 60%; 
+  width: 70%; 
+  height: 80%;
   height: auto;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -258,13 +361,12 @@ body {
 .dropbtn{
   font-weight: 700;
 }
+
 .nav-item {
   font-weight: 500;
   width: 172px;
   height: 51px;  
 }
-
-
 
 .text-content p img {
   width: 50px;
@@ -281,7 +383,14 @@ body {
 }
 
 /* Styling untuk logo dan teks */
-.text-content p {
+.content-right .text-content p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: bolder;
+  line-height: 2.5;
+}
+
+.content-left .text-content p {
   font-size: 1.1rem;
   margin-bottom: 15px;
   font-weight: bolder;
@@ -296,27 +405,6 @@ body {
   border: 10px solid white;
 }
 
-/* Responsive Design untuk layar kecil */
-@media screen and (max-width: 768px) {
-  .content-left, .content-right {
-    flex-direction: column;
-  }
-
-  .content-left .text-content, .content-right .text-content {
-    text-align: center;
-  }
-
-  .content-left .image-content, .content-right .image-content {
-    text-align: center;
-  }
-
-  .image-content img {
-    max-width: 80%;
-    width: 80%;
-    margin: auto;
-  }
-}
-
 .fw-bold {
   font-weight: 700;
 }
@@ -326,6 +414,76 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 0;
 }
+
+/* Mobile untuk content */
+/* Mobile Styling */
+@media (max-width: 768px) {
+  .service-section {
+    padding: 30px 15px; /* Kurangi padding untuk lebih fokus */
+  }
+
+  .corner-image {
+    position: absolute;
+    width: 55px; /* Sesuaikan ukuran gambar */
+    height: auto;
+    z-index: 1;
+  }
+
+  .center-top-image {
+    top: -53px;
+    width: 106px;
+    height: auto;
+    z-index: 3;
+  }
+
+  .content-left, .content-right {
+    flex-direction: column; /* Tumpuk gambar dan teks */
+    align-items: center;
+    gap: 20px; /* Jarak antara teks dan gambar */
+    padding-inline: 0; /* Hilangkan padding berlebih */
+  }
+
+  .content-left .text-content, .content-right .text-content {
+    text-align: center; /* Pusatkan teks di mobile */
+    width: 100%; /* Pastikan teks memenuhi lebar layar */
+    padding: 0 15px; /* Sedikit padding untuk memberikan ruang */
+  }
+
+  .content-left .image-content, .content-right .image-content {
+    text-align: center; /* Pusatkan gambar */
+    padding: 0; /* Hilangkan padding di sekitar gambar */
+  }
+
+  .image-content img {
+    max-width: 100%; /* Pastikan gambar menyesuaikan ukuran layar */
+    width: 80%; /* Batasi lebar gambar agar tidak terlalu besar */
+    height: auto;
+    margin-bottom: 20px; /* Jarak antara gambar dan teks */
+    border-radius: 8px; /* Haluskan sudut gambar */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk kedalaman */
+  }
+
+  .text-content p {
+    font-size: 1rem; /* Ukuran teks lebih kecil di mobile */
+    line-height: 1.6; /* Beri ruang antar baris agar lebih mudah dibaca */
+    margin-bottom: 20px; /* Jarak yang nyaman antar paragraf */
+    color: #333; /* Gunakan warna teks yang kontras */
+  }
+
+  .text-content h3 {
+    font-size: 1.5rem; /* Ukuran heading yang lebih kecil di mobile */
+    margin-bottom: 15px;
+  }
+
+  /* Ikon di dalam teks */
+  .text-content p img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}
+
 
 .package-section {
   max-width: 1200px;
@@ -340,9 +498,9 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 40px;
-  background-color: #fff;
+  background-color: #f1f0f0;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .package-text {
@@ -362,7 +520,7 @@ body {
   position: absolute;
   left: 0;
   font-size: 24px;
-  top: 0;
+  top: -5px;
 }
 
 .package-text ul {
@@ -401,4 +559,144 @@ body {
 
 .mua-partner ul li {
   font-size: 14px;
+}
+
+/* untuk slideshow */
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 50vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 60vh ; 
+}
+
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1);
+  font-weight: bolder;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .package-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .package-text, .mua-partner, .package-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .package-text ul {
+    padding-left: 0;
+  }
+
+  .package-text h2 {
+    font-size: 20px;
+    padding-left: 0;
+  }
+
+  .package-text h2::before {
+    left: 48px;
+    top: -9px;
+  }
+
+  .package-image img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .mua-partner ul {
+    padding-left: 0;
+  }
+  
+  .mua-partner {
+    margin: 20px 0px;
+    
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .mySlides {
+  position: relative; /* Ensure the slides container is positioned relative */
+}
+
+.mySlides img {
+  width: 60vw; /* Scale the image width for mobile */
+  height: 45vh;
+  display: block; /* Ensure the image is treated as a block-level element */
+  margin: 0 auto; /* Center the image */
+}
+
+.prev, .next {
+  position: absolute; /* Position arrows absolutely within the container */
+  top: 50%; /* Vertically center the arrows */
+  transform: translateY(-50%); /* Adjust for centering */
+  font-size: 12px; /* Reduce arrow size */
+  padding: 10px; /* Adjust padding */
+  cursor: pointer;
+  color: white; /* Make sure the arrows are visible */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a background for better visibility */
+}
+
+.prev {
+  left: -5px; /* Position the previous button on the left */
+}
+
+.next {
+  right: -5px; /* Position the next button on the right */
+}
 }

@@ -3,23 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wedding Packages</title>
+    <link rel="icon" href="assets/img/logo drasty 2.png" />
+    <title class="title">PAKET WEDDING</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body style="background-color: #d9d9d9">
     <header>
-      <div class="navbar2">
+      <div class="navbar paket">
         <div class="logo">PAKET WEDDING</div>
         <nav>
-          <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+          <ul class="nav-links">
+            <li>
+              <a href="index.html">HOME</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropbtn" onclick="toggleDropdown()">CONTACT</a>
+              <div class="dropdown-content">
+                <a
+                  href="https://www.instagram.com/drastywedding/?igsh=MXB3aG9yaGQ2NnV1dg%3D%3D"
+                  >Instagram</a
+                >
+                <a
+                  href="https://wa.me/6285176841868?text=Hello Admin, Saya Boleh Tanya Tanya terlebih dahulu"
+                  >WhatsApp</a
+                >
+              </div>
+            </li>
           </ul>
         </nav>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
       </div>
     </header>
 
     <section class="package-section">
+      <!-- Package Busana -->
       <div class="package-container">
         <div class="package-text">
           <h2>PAKET BUSANA 1</h2>
@@ -36,10 +53,27 @@
           </ul>
         </div>
         <div class="package-image">
-          <img src="assets/img/paket1.jpg" class="polaroid" alt="Model 1" />
+          <div class="slideshow-container slideshow1">
+            <div class="mySlides fade">
+              <img src="assets/img/paket4.jpg" class="polaroid" alt="Model 1" />
+              <div class="text">Model 1</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/img/paket3.jpg" class="polaroid" alt="Model 2" />
+              <div class="text">Model 2</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/img/paket2.jpg" class="polaroid" alt="Model 3" />
+              <div class="text">Model 3</div>
+            </div>
+            <!-- Panah Next dan Prev -->
+            <a class="prev" onclick="plusSlides(-1,0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1,0)">&#10095;</a>
+          </div>
         </div>
       </div>
-
+      <!-- mua patner -->
+      <!-- Paket MUA 1 -->
       <div class="package-container">
         <div class="package-text">
           <h2>PAKET MUA 1</h2>
@@ -78,9 +112,251 @@
         </div>
 
         <div class="package-image">
-          <img src="assets/img/paket2.jpg" class="polaroid" alt="Model 2" />
+          <div class="slideshow-container slideshow2">
+            <div class="mySlides fade">
+              <img src="assets/img/paket4.jpg" class="polaroid" alt="Model 1" />
+              <div class="text">Model 1</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/img/paket3.jpg" class="polaroid" alt="Model 2" />
+              <div class="text">Model 2</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/img/paket2.jpg" class="polaroid" alt="Model 3" />
+              <div class="text">Model 3</div>
+            </div>
+            <!-- Panah Next dan Prev -->
+            <a class="prev" onclick="plusSlides(-1,1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1,1)">&#10095;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paket MUA 2 -->
+      <div class="package-container">
+        <div class="package-text">
+          <h2>PAKET MUA 2</h2>
+          <ul>
+            <li>Busana akad Calon Pengantin Wanita & Calon Pengantin Pria</li>
+            <li>
+              Busana resepsi Calon Pengantin Wanita & Calon Pengantin Pria
+            </li>
+            <li>Aksesoris Pengantin Lengkap</li>
+            <li>Busana untuk 2 Orang Ibu Pengantin</li>
+            <li>Busana untuk 2 Orang Bapak</li>
+            <li>Busana 2 Orang Pagar ayu</li>
+            <li>Busana 2 Orang Pagar Bagss</li>
+            <li>Make Up 2 Orang Pagar ayu</li>
+            <li>Make Up 2 Orang Bagus</li>
+            <li>Aksesoris Orang Tua</li>
+            <li>Melati, Hand Bouquet & Nail Art</li>
+          </ul>
+        </div>
+
+        <div class="mua-partner">
+          <strong>MUA Partner:</strong>
+          <ul>
+            <il>-Nadya andia Saleha</il>
+            <li>-Afiyah Zahra</li>
+            <li>-Soja Putri</li>
+            <li>-Isma Wulandari</li>
+            <li>-Clara Oktavian</li>
+            <li>-Deria Barmadie</li>
+            <li>-Mira Rizkai</li>
+          </ul>
+        </div>
+
+        <div class="package-image">
+          <div class="slideshow-container slideshow3">
+            <div class="mySlides fade">
+              <img src="assets/img/paket4.jpg" class="polaroid" alt="Model 1" />
+              <div class="text">Model 1</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/img/paket3.jpg" class="polaroid" alt="Model 2" />
+              <div class="text">Model 2</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/img/paket2.jpg" class="polaroid" alt="Model 3" />
+              <div class="text">Model 3</div>
+            </div>
+            <!-- Panah Next dan Prev -->
+            <a class="prev" onclick="plusSlides(-1,2)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1,2)">&#10095;</a>
+          </div>
+        </div>
+      </div>
+      <!-- Paket MUA 3 -->
+      <div class="package-container">
+        <div class="package-text">
+          <h2>PAKET MUA 3</h2>
+          <ul>
+            <li>Busana akad Calon Pengantin Wanita & Calon Pengantin Pria</li>
+            <li>
+              Busana resepsi Calon Pengantin Wanita & Calon Pengantin Pria
+            </li>
+            <li>Aksesoris Pengantin Lengkap</li>
+            <li>Busana untuk 2 Orang Ibu Pengantin</li>
+            <li>Busana untuk 2 Orang Bapak</li>
+            <li>Busana 2 Orang Pagar ayu</li>
+            <li>Busana 2 Orang Pagar Bagss</li>
+            <li>Make Up 2 Orang Pagar ayu</li>
+            <li>Make Up 2 Orang Bagus</li>
+            <li>Aksesoris Orang Tua</li>
+            <li>Melati, Hand Bouquet & Nail Art</li>
+          </ul>
+        </div>
+
+        <div class="mua-partner">
+          <strong>MUA Partner:</strong>
+          <ul>
+            <li>-Kiki Kushi</li>
+            <li>-Danika devisca</li>
+            <li>-Vera Verial</li>
+            <li>-Dinan rahman</li>
+            <li>-Epul Permadi</li>
+            <li>-Fathi NRM</li>
+          </ul>
+        </div>
+
+        <div class="package-image">
+          <div class="slideshow-container slideshow4">
+            <div class="mySlides fade">
+              <img src="assets/img/paket4.jpg" class="polaroid" alt="Model 1" />
+              <div class="text">Model 1</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/img/paket3.jpg" class="polaroid" alt="Model 2" />
+              <div class="text">Model 2</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/img/paket2.jpg" class="polaroid" alt="Model 3" />
+              <div class="text">Model 3</div>
+            </div>
+            <!-- Panah Next dan Prev -->
+            <a class="prev" onclick="plusSlides(-1,3)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1,3)">&#10095;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAKET MUA 4 -->
+      <div class="package-container">
+        <div class="package-text">
+          <h2>PAKET MUA 4</h2>
+          <ul>
+            <li>Busana akad Calon Pengantin Wanita & Calon Pengantin Pria</li>
+            <li>
+              Busana resepsi Calon Pengantin Wanita & Calon Pengantin Pria
+            </li>
+            <li>Aksesoris Pengantin Lengkap</li>
+            <li>Busana untuk 2 Orang Ibu Pengantin</li>
+            <li>Busana untuk 2 Orang Bapak</li>
+            <li>Busana 2 Orang Pagar ayu</li>
+            <li>Busana 2 Orang Pagar Bagss</li>
+            <li>Make Up 2 Orang Pagar ayu</li>
+            <li>Make Up 2 Orang Bagus</li>
+            <li>Aksesoris Orang Tua</li>
+            <li>Melati, Hand Bouquet & Nail Art</li>
+          </ul>
+        </div>
+
+        <div class="mua-partner">
+          <strong>MUA Partner:</strong>
+          <ul>
+            <li>-Nanath Nadia</li>
+            <li>-Iren Aldrian</li>
+            <li>-Dewi Tian</li>
+            <li>-adi Rustana</li>
+            <li>-Kiranafary</li>
+          </ul>
+        </div>
+        <!-- slideshow -->
+        <div class="package-image">
+          <div class="slideshow-container slideshow5">
+            <div class="mySlides fade">
+              <img src="assets/img/paket4.jpg" class="polaroid" alt="Model 1" />
+              <div class="text">Model 1</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/img/paket3.jpg" class="polaroid" alt="Model 2" />
+              <div class="text">Model 2</div>
+            </div>
+            <div class="mySlides fade">
+              <img src="assets/img/paket2.jpg" class="polaroid" alt="Model 3" />
+              <div class="text">Model 3</div>
+            </div>
+            <!-- Panah Next dan Prev -->
+            <a class="prev" onclick="plusSlides(-1,4)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1,4)">&#10095;</a>
+          </div>
         </div>
       </div>
     </section>
   </body>
 </html>
+<script>
+  let slideIndex = [1, 1, 1, 1, 1] // Buat array slideIndex sesuai jumlah slideshow
+  let slideId = [
+    "slideshow1",
+    "slideshow2",
+    "slideshow3",
+    "slideshow4",
+    "slideshow5",
+  ] // ID slideshow
+
+  // Fungsi untuk menampilkan slide
+
+  function toggleMenu() {
+    const navLinks = document.querySelector(".nav-links")
+    navLinks.classList.toggle("active")
+  }
+
+  function toggleDropdown() {
+    const dropdownContent = document.querySelector(".dropdown-content")
+    dropdownContent.style.display =
+      dropdownContent.style.display === "block" ? "none" : "block"
+  }
+
+  window.onclick = function (event) {
+    if (!event.target.matches(".dropbtn")) {
+      const dropdowns = document.getElementsByClassName("dropdown-content")
+      for (let i = 0; i < dropdowns.length; i++) {
+        const openDropdown = dropdowns[i]
+        if (openDropdown.style.display === "block") {
+          openDropdown.style.display = "none"
+        }
+      }
+    }
+  }
+
+  function showSlides(n, no) {
+    let i
+    let slides = document.getElementsByClassName(slideId[no]) // Dapatkan elemen slideshow berdasarkan ID
+
+    let images = slides[0].getElementsByClassName("mySlides") // Ambil elemen dengan kelas "mySlides"
+    if (n > images.length) {
+      slideIndex[no] = 1
+    } // Jika sudah melewati jumlah slide, kembali ke awal
+    if (n < 1) {
+      slideIndex[no] = images.length
+    } // Jika kurang dari slide pertama, lompat ke slide terakhir
+
+    // Sembunyikan semua slide
+    for (i = 0; i < images.length; i++) {
+      images[i].style.display = "none"
+    }
+    // Tampilkan slide yang sesuai
+    images[slideIndex[no] - 1].style.display = "block"
+  }
+
+  // Fungsi untuk mengubah slide
+  function plusSlides(n, no) {
+    showSlides((slideIndex[no] += n), no)
+  }
+
+  // Inisialisasi semua slideshow
+  for (let i = 0; i < slideId.length; i++) {
+    showSlides(1, i) // Tampilkan slide pertama untuk setiap slideshow
+  }
+</script>

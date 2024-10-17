@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/img/logo drasty 2.png" type="image/x-icon">
   <body>
     <!-- Header -->
 
@@ -15,30 +16,31 @@
     <section id="hero" class="hero">
       <div class="overlay"></div>
       <header>
-        <div class="navbar">
-          <div class="logo">DRASTY GALLERY WEDDING</div>
+       <div class="navbar">
+          <div class="logo">DRASTY WEDDING GALLERY</div>
+          <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+          </div>
           <nav>
-            <ul>
-              <li class="nav-link"><a class="nav-item"  href="#home">HOME</a></li>
-              
+            <ul class="nav-links">
+              <li class="nav-link">
+                <a class="nav-item"  href="#home">HOME</a></li>          
               <li class="dropdown">  
-                <button class="dropbtn">CONTACT</button>
-                <div class="dropdown-content">
-                  <a href="#instagram">Instagram</a>
-                  <a href="#whatsapp">WhatsApp</a>
+                <a class="dropbtn" onclick="toggleDropdown()">CONTACT</a>
+                <div class="dropdown-content">  
+                  <a href="https://www.instagram.com/drastywedding/?igsh=MXB3aG9yaGQ2NnV1dg%3D%3D">Instagram</a>
+                  <a href="https://wa.me/6281463823878?text=Hello Admin, Saya Boleh Tanya Tanya terlebih dahulu">WhatsApp</a>
                 </div>
               </li>
-              
-              <li class="nav-link"><a class="nav-item" href="#about">ABOUT</a></li>
+              <li class="nav-link"><a class="nav-item" href="about.html">ABOUT</a></li>
               <li class="nav-link"><a class="nav-item" href="paket.html">PAKET</a></li>
             </ul>
           </nav>
         </div>
-      </header>
+      </header>   
       <div class="content">
         <h1>WELCOME</h1>
-        <div class="title-container">
-        </div>
+        <div class="title-container"></div>
       </div>
     </section>
 
@@ -97,10 +99,19 @@
           </p>
         </div>
       </div>
+
+
+      <img src="assets/img/kra.png" alt="Image Corner 1" class="corner-image top-left">
+      <img src="assets/img/ka.png" alt="Image Corner 2" class="corner-image top-right">
+      <img src="assets/img/krb.png" alt="Image Corner 3" class="corner-image bottom-left">
+      <img src="assets/img/kb.png" alt="Image Corner 4" class="corner-image bottom-right">
+      <img src="assets/img/bunga-pink.png" alt="Bunga Pink" class="center-top-image">
     </section>
+    
   </body>
 </html>
 <script>
+  // Script navbar animasi
   window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar")
     const hero = document.querySelector(".hero")
@@ -112,4 +123,29 @@
       navbar.classList.remove("scrolled")
     }
   })
+
+ function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+
+
+function toggleDropdown() {
+  const dropdownContent = document.querySelector('.dropdown-content');
+  dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let i = 0; i < dropdowns.length; i++) {
+      const openDropdown = dropdowns[i];
+      if (openDropdown.style.display === 'block') {
+        openDropdown.style.display = 'none';
+      }
+    }
+  }
+}
+
 </script>
+</body>
